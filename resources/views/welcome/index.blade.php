@@ -94,7 +94,7 @@
                             <div class="card-body">
                                 <h5 class="card-title">Roulez avec nous</h5>
                                 <p class="card-text">Inscrivez-vous maintenant, commencez à proposer la meilleure sélection avec Uber Eats, maximisez vos revenus en déplacement dès aujourd'hui..</p>
-                                <button type="button" class="btn btn-warning">Commencer </button>
+                                <a href="http://127.0.0.1:8000/welcome.livreur" class="btn btn-warning">Commencer</a>
                             </div>
                         </div>
                         </div>

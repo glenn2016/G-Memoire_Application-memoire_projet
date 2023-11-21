@@ -165,6 +165,12 @@
     background-size: cover;
 }
 
+.hero-headerds {
+    background: linear-gradient(rgba(15, 23, 43, .9), rgba(15, 23, 43, .9)), url(../img/pexels-norma-mortenson-4392039.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
 
 .hero-header img {
     animation: imgRotate 50s linear infinite;
@@ -245,7 +251,7 @@
     position: relative;
     height: 100%;
     min-height: 500px;
-    background: linear-gradient(rgba(15, 23, 43, .1), rgba(15, 23, 43, .1)), url(../img/video.jpg);
+    background: linear-gradient(rgba(15, 23, 43, .1), rgba(15, 23, 43, .1)), url(../img/pexels-samson-katt-5226497.jpg);
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;

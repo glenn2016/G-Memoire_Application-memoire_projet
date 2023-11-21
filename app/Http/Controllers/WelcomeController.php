@@ -12,6 +12,10 @@ class WelcomeController extends Controller
         return view ('welcome.restaurants');
     }
 
+    public function livreur () {
+        return view ('welcome.livreur');
+    }
+
     public function menu () {
         return view ('menu.menu');
     }

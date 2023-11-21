@@ -15,11 +15,12 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
+Route::get('/', function () {   
     return view('welcome.index');
 });
 
 Route::get('welcome.restaurants', [WelcomeController::class, 'index']);
+Route::get('welcome.livreur', [WelcomeController::class, 'livreur']);
 Route::get('menu.menu', [WelcomeController::class, 'menu']);
 Route::get('menu.menuef', [WelcomeController::class, 'menuef']);
 
