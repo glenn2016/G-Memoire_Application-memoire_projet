@@ -66,10 +66,9 @@
                         </div>
                         <a href="contact.html" class="nav-item nav-link">Aide</a>
                     </div>
-                    <a href="" class="btn btn-primary py-2 px-4">Se conncter</a>
                     &nbsp
                     &nbsp
-                    <a href="" class="btn btn-primary py-2 px-4">Inscription</a>
+                    <a href="http://127.0.0.1:8000/inscription#" class="btn btn-primary py-2 px-4">Inscription</a>
                 </div>
             </nav>
 
@@ -138,6 +137,49 @@
             </div>
         </div>
         <!-- About End -->
+
+        <!-- Reservation Start -->
+        <div class="container-xxl py-5 px-0 wow fadeInUp" data-wow-delay="0.1s">
+            <div class="row g-0">
+
+                <div class="col-md-6 bg-dark d-flex align-items-center">
+                    <div class="p-5 wow fadeInUp" data-wow-delay="0.2s">
+                        <h5 class="section-title ff-secondary text-start text-primary fw-normal">Reservation</h5>
+                        <h1 class="text-white mb-4">Ouvrez l'appli et commencez à gagner de l'argent</h1>
+                        <p class="mb-4">Connectez-vous sur l'appli chaque fois que vous vous trouvez dans une zone Deliveroo pendant les heures de livraison. Tant que vous êtes en ligne, nous vous proposerons des commandes. Pour vous aider à gagner du temps et augmenter vos revenus, l'application vous permet de visualiser les zones de forte demande sur une carte. Vous pouvez rester en ligne aussi longtemps que vous le souhaitez. C'est vous qui décidez !</p>
+                        <p class="mb-4">Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit. Aliqu diam amet diam et eos. Clita erat ipsum et lorem et sit, sed stet lorem sit clita duo justo magna dolore erat amet</p>
+                        <a class="btn btn-primary py-3 px-5 mt-2" href="">Read More</a>  
+                    </div>
+                </div>
+
+                <div class="col-md-6">
+                    <div class="video">
+                        <button type="button" class="btn-play" data-bs-toggle="modal" data-src="https://www.youtube.com/embed/DWRcNpR6Kdc" data-bs-target="#videoModal">
+                            <span></span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="modal fade" id="videoModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content rounded-0">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Youtube Video</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <!-- 16:9 aspect ratio --> <img src="welcome/img/pexels-mizuno-k-13737055 (1).jpg" class="position-relative rounded w-100 h-100">
+                        <div class="ratio ratio-16x9">
+                            <iframe class="embed-responsive-item" src="" id="video" allowfullscreen allowscriptaccess="always"
+                                allow="autoplay"></iframe>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Reservation End -->
 
 
         <!-- Team Start -->
@@ -208,6 +250,119 @@
             </div>
         </div>
         <!-- Team End -->
+
+        <!-- ======= Recent Blog Posts Section ======= -->
+    <section id="recent-blog-posts" class="recent-blog-posts">
+    <div class="container" data-aos="fade-up" ">
+        
+    <div class=" section-header ">
+            <h2>Explorer plus de resources</h2>
+            <p>In commodi voluptatem excepturi quaerat nihil error autem voluptate ut et officia consequuntu</p>
+        </div>
+
+      <div class="row gy-5 ">
+
+        <div class="col-xl-4 col-md-6 " data-aos="fade-up " data-aos-delay="100 ">
+          <div class="post-item position-relative h-100 ">
+
+            <div class="post-img position-relative overflow-hidden ">
+              <img src="welcome/img/pexels-pavel-danilyuk-6612709.jpg" class="img-fluid " alt=" ">
+              <span class="post-date ">December 12</span>
+            </div>
+
+            <div class="post-content d-flex flex-column ">
+
+              <h3 class="post-title ">Eum ad dolor et. Autem aut fugiat debitis</h3>
+
+              <div class="meta d-flex align-items-center ">
+                <div class="d-flex align-items-center ">
+                  <i class="bi bi-person "></i> <span class="ps-2 ">Julia Parker</span>
+                </div>
+                <span class="px-3 text-black-50 ">/</span>
+                <div class="d-flex align-items-center ">
+                  <i class="bi bi-folder2 "></i> <span class="ps-2 ">Politics</span>
+                </div>
+              </div>
+
+              <hr>
+
+              <a href="blog-details.html " class="readmore stretched-link "><span>Read More</span><i
+                  class="bi bi-arrow-right "></i></a>
+
+            </div>
+
+          </div>
+        </div><!-- End post item -->
+
+        <div class="col-xl-4 col-md-6 " data-aos="fade-up " data-aos-delay="200 ">
+          <div class="post-item position-relative h-100 ">
+
+            <div class="post-img position-relative overflow-hidden ">
+              <img src="welcome/img/pexels-adrienn-1537635.jpg" class="img-fluid " alt=" ">
+              <span class="post-date ">July 17</span>
+            </div>
+
+            <div class="post-content d-flex flex-column ">
+
+              <h3 class="post-title ">Et repellendus molestiae qui est sed omnis</h3>
+
+              <div class="meta d-flex align-items-center ">
+                <div class="d-flex align-items-center ">
+                  <i class="bi bi-person "></i> <span class="ps-2 ">Mario Douglas</span>
+                </div>
+                <span class="px-3 text-black-50 ">/</span>
+                <div class="d-flex align-items-center ">
+                  <i class="bi bi-folder2 "></i> <span class="ps-2 ">Sports</span>
+                </div>
+              </div>
+
+              <hr>
+
+              <a href="blog-details.html " class="readmore stretched-link "><span>Read More</span><i
+                  class="bi bi-arrow-right "></i></a>
+
+            </div>
+
+          </div>
+        </div><!-- End post item -->
+
+        <div class="col-xl-4 col-md-6 ">
+          <div class="post-item position-relative h-100" data-aos="fade-up " data-aos-delay="300 ">
+
+            <div class="post-img position-relative overflow-hidden ">
+              <img src="welcome/img/pexels-karolina-grabowska-8547604.jpg " class="img-fluid " alt=" ">
+              <span class="post-date ">September 05</span>
+            </div>
+
+            <div class="post-content d-flex flex-column ">
+
+              <h3 class="post-title ">Quia assumenda est et veritati tirana ploder</h3>
+
+              <div class="meta d-flex align-items-center ">
+                <div class="d-flex align-items-center ">
+                  <i class="bi bi-person "></i> <span class="ps-2 ">Lisa Hunter</span>
+                </div>
+                <span class="px-3 text-black-50 ">/</span>
+                <div class="d-flex align-items-center ">
+                  <i class="bi bi-folder2 "></i> <span class="ps-2 ">Economics</span>
+                </div>
+              </div>
+
+              <hr>
+
+              <a href="blog-details.html " class="readmore stretched-link "><span>Read More</span><i
+                  class="bi bi-arrow-right "></i></a>
+
+            </div>
+
+          </div>
+        </div><!-- End post item -->
+
+      </div>
+
+      </div>
+    </section>
+    <!-- End Recent Blog Posts Section -->
         
 
         <!-- Footer Start -->

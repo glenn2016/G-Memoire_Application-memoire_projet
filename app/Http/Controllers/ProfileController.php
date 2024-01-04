@@ -57,4 +57,8 @@ class ProfileController extends Controller
 
         return Redirect::to('/');
     }
+    public function attente(): View
+    {
+        return view('welcome.attente');
+    }
 }

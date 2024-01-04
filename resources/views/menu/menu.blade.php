@@ -66,7 +66,7 @@
                         @if (Route::has('register'))
                             <a href="{{ route('register') }}" class="btn btn-primary py-2 px-4"><i class="bi bi-pencil-square"></i>  Inscription</a>
                         @endif
-                            &nbsp; :
+                            &nbsp; 
                                 <a href="{{ route('login') }}" class="btn btn-primary py-2 px-4"><i class="bi bi-person"></i> Connexion</a>
                     @endauth 
                 </div>    

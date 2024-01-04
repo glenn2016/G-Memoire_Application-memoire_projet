@@ -1,208 +1,109 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
-    <link href="welcome/css/bootstrap-icons.css" rel="stylesheet">
-
-    <title>Page de connexion</title>
-
-        <style>
-        body {
-            margin: 0;
-            padding: 0;
-        }
-
-        .container {
-            display: flex;
-            height: 100vh;
-            align-items: center;
-            justify-content: center;
-        }
-
-        .image {
-            flex: 1;
-            height: 100%;
-            background-image: url('welcome/img/mls.PNG');
-            background-size: cover;
-            background-position: center;
-        }
-
-        .form {
-            flex: 1;
-            height: 100%;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-        }
-
-        form {
-            width: 100%;
-            max-width: 400px;
-            padding: 40px;
-            background-color: #fff;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-        }
-
-        input[type="email"],
-        input[type="password"] {
-            width: 100%;
-            padding: 10px;
-            margin-bottom: 50px;
-            border: none;
-            border-radius: 50px;
-            box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
-            font-size: 16px;
-        }
-
-        button[type="submit"] {
-            background-color: #0e0530;
-            color: #fff;
-            border: none;
-            border-radius: 50px;
-            padding: 10px 20px;
-            font-size: 16px;
-            cursor: pointer;
-            margin-bottom: 10px;
-            width: 100%;
-        }
-        .btn{
-            background-color: #0e0530;
-            color: #fff;
-            border: none;
-            border-radius: 50px;
-            padding: 10px 0px;
-            font-size: 16px;
-            cursor: pointer;
-            margin-bottom: 10px;
-            width: 100%;
-        }
-
-        .social-buttons {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-
-        }
-
-        .social-buttons li {
-            list-style: none;
-            width: 50px;
-            height: 50px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            background-color: #fea116;
-            border-radius: 50px;
-            margin: 0 7px;
-            cursor: pointer;
-
-        }
-
-        .social-buttons li:hover {
-            background-color: #0e0530;
-        }
-
-        h2 {
-
-            color: black;
-            font-weight: 600;
-            font-size: 1.5em;
-            text-transform: uppercase;
-            margin-bottom: 20px;
-            border-bottom: 4px solid #0e0530;
-            display: inline-block;
-            letter-spacing: 1px;
-
-        }
-
-        label {
-
-            font-size: 16px;
-            margin-bottom: 5px;
-            display: inline-block;
-            color: #0e0530;
-            font-weight: 300;
-            letter-spacing: 1px;
-
-            /*text-align: left;*/
-
-        }
-        span{
-            font-size: 16px;
-            margin-bottom: 5px;
-            display: inline-block;
-            color: white;
-            font-weight: 300;
-        }
-
-        .forgot-password {
-            margin-top: 5px;
-            text-align: left;
-        }
-    </style>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>Se connecter - G-eat</title>
+  <!-- base:css -->
+  <link rel="stylesheet" href="restaurant/vendors/mdi/css/materialdesignicons.min.css">
+  <link rel="stylesheet" href="restaurant/vendors/css/vendor.bundle.base.css">
+  <!-- endinject -->
+  <!-- plugin css for this page -->
+  <!-- End plugin css for this page -->
+  <!-- inject:css -->
+  <link rel="stylesheet" href="restaurant/css/style.css">
+  <!-- endinject -->
+  <link rel="shortcut icon" href="welcome/img/Capture-removebg-preview.png" />
 </head>
 
 <body>
-    <div class="container">
-        <div class="image"></div>
-        <div class="form">
-            <form method="POST" action="{{ route('login') }}">
-                
-            @csrf
-
-             <img src="{{asset('welcome/img/Capture-removebg-preview.png')}}" width="50%">
-
-                <h2>Se connecter</h2>
-
-                <label for="email" style="text-align:rigth;">Adresse e-mail</label>
-                <input type="email" name="email" :value="old('email')" required autofocus autocomplete="username">
-                <x-input-error :messages="$errors->get('email')" class="mt-2" />
-
-                <label for="password">Mot de passe</label>
-                <input id="password" class="block mt-1 w-full"
-                            type="password"
-                            name="password"
-                            required autocomplete="current-password">
-                <x-input-error :messages="$errors->get('password')" class="mt-2" />
-
-                    <x-primary-button class="ml-3">
+  <div class="container-scroller d-flex">
+    <div class="container-fluid page-body-wrapper full-page-wrapper d-flex">
+      <div class="content-wrapper d-flex align-items-stretch auth auth-img-bg">
+        <div class="row flex-grow">
+          <div class="col-lg-6 d-flex align-items-center justify-content-center">
+            <div class="auth-form-transparent text-left p-3">
+              <div class="brand-logo">
+                <img src="welcome/img/Capture-removebg-preview.png" alt="logo">
+              </div>
+              <h4>Welcome back!</h4>
+              <h6 class="font-weight-light">Content de te revoir!!</h6>
+              <form class="pt-3" method="POST" action="{{ route('login') }}">
+                @csrf
+                <div class="form-group">
+                  <label for="exampleInputEmail">Adresse e-mail</label>
+                  <div class="input-group">
+                    <div class="input-group-prepend bg-transparent">
+                      <span class="input-group-text bg-transparent border-right-0">
+                        <i class="mdi mdi-account-outline text-primary"></i>
+                      </span>
+                    </div>
+                    <input type="email" name="email" :value="old('email')" required autofocus autocomplete="email" class="form-control form-control-lg border-left-0" id="email" placeholder="Email">
+                    <x-input-error :messages="$errors->get('email')" class="mt-2" />
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label for="exampleInputPassword">Mot de passe</label>
+                  <div class="input-group">
+                    <div class="input-group-prepend bg-transparent">
+                      <span class="input-group-text bg-transparent border-right-0">
+                        <i class="mdi mdi-lock-outline text-primary"></i>
+                      </span>
+                    </div>
+                    <input type="password" name="password" required autocomplete="current-password" class="form-control form-control-lg border-left-0" id="password" placeholder="Mot de passe">        
+                    <x-input-error :messages="$errors->get('password')" class="mt-2" />                
+                  </div>
+                </div>
+                <div class="my-2 d-flex justify-content-between align-items-center">
+                  <div class="form-check">
+                    <label class="form-check-label text-muted">
+                      <input type="checkbox" class="form-check-input" name="remember">
+                      Souviens-toi de moi
+                    </label>
+                  </div>
+                @if (Route::has('password.request'))
+                  <a href="{{ route('password.request') }}" class="auth-link text-black">Mot de passe oublié ?</a>
+                @endif
+                </div>
+                <div class="my-3">
+                <x-primary-button style="background-color:#fea116;" class="btn btn-block btn-primary btn-lg font-weight-medium auth-form-btn ">
                         {{ __('Se connecter') }}
                     </x-primary-button>
-
-                <a href="http://127.0.0.1:8000/register" style="background:#fea116;" class="btn"> <span style="margin: 0 auto;">S'inscrire</span></a>
-
-                <ul class="social-buttons">
-                    <li href=" # " class=" d-flex align-items-center justify-content-center "><i
-                            class=" bi bi-twitter "></i></li>
-                    <li href=" # " class=" d-flex align-items-center justify-content-center "><i
-                            class=" bi bi-facebook "></i></li>
-                    <li href=" # " class=" d-flex align-items-center justify-content-center "><i
-                            class=" bi bi-instagram "></i></li>
-                    <li href=" # " class=" d-flex align-items-center justify-content-center "><i
-                            class=" bi bi-linkedin "></i></a></li>
-                </ul>
-
-                <div class="forgot-password">
-
-                    @if (Route::has('password.request'))
-                        <a class="underline text-sm text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-100 rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 dark:focus:ring-offset-gray-800" href="{{ route('password.request') }}">
-                            {{ __('Mot de passe oublié ?') }}
-                        </a>
-                    @endif
-
-                    <input id="remember_me" type="checkbox" name="remember">
-                    <span>{{ __('Remember me') }}</span>
                 </div>
-
+                <div class="mb-2 d-flex">
+                  <button type="button" class="btn btn-facebook auth-form-btn flex-grow mr-1">
+                    <i class="mdi mdi-facebook mr-2"></i>Facebook
+                  </button>
+                  <button type="button" class="btn btn-google auth-form-btn flex-grow ml-1">
+                    <i class="mdi mdi-google mr-2"></i>Google
+                  </button>
+                </div>
+                <div class="text-center mt-4 font-weight-light">
+                Vous n'avez pas de compte ? <a href="http://127.0.0.1:8000/register" class="text-primary">S'inscrire</a>
+                </div>
+              </form>
+            </div>
+          </div>
+          <div class="col-lg-6 login-half-bg d-none d-lg-flex flex-row">
+            <p class="text-white font-weight-medium text-center flex-grow align-self-end">Copyright &copy; 2018  All rights reserved.</p>
+          </div>
         </div>
-        </form>
+      </div>
+      <!-- content-wrapper ends -->
     </div>
-    </div>
+    <!-- page-body-wrapper ends -->
+  </div>
+  <!-- container-scroller -->
+  <!-- base:js -->
+  <script src="restaurant/vendors/js/vendor.bundle.base.js"></script>
+  <!-- endinject -->
+  <!-- inject:js -->
+  <script src="restaurant/js/off-canvas.js"></script>
+  <script src="restaurant/js/hoverable-collapse.js"></script>
+  <script src="restaurant/js/template.js"></script>
+  <!-- endinject -->
 </body>
 
 </html>

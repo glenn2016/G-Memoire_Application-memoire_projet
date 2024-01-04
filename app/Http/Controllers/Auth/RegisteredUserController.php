@@ -23,6 +23,11 @@ class RegisteredUserController extends Controller
         return view('auth.register');
     }
 
+    public function subscrite(): View
+    {
+       return view ('restaurant.auth.inscription');
+   }
+
     /**
      * Handle an incoming registration request.
      *
@@ -31,21 +36,58 @@ class RegisteredUserController extends Controller
     public function store(Request $request): RedirectResponse
     {
         $request->validate([
-            'name' => ['required', 'string', 'max:255'],
+            'nom' => ['required', 'string', 'max:255'],
+            'prenom' => ['required', 'string', 'max:255'],
+            'adresse' => ['required', 'string', 'max:255'],
+            'numero_de_telephone' => ['required', 'string', 'max:255'],
+            'profil' => ['required', 'integer', 'max:255'],
             'email' => ['required', 'string', 'email', 'max:255', 'unique:'.User::class],
             'password' => ['required', 'confirmed', Rules\Password::defaults()],
         ]);
 
         $user = User::create([
-            'name' => $request->name,
+            'nom' => $request->nom,
+            'prenom' => $request->prenom,
+            'adresse' => $request->adresse,
+            'numero_de_telephone' => $request->numero_de_telephone,
+            'profil' => $request->profil,
             'email' => $request->email,
             'password' => Hash::make($request->password),
         ]);
 
         event(new Registered($user));
-
         Auth::login($user);
+        return redirect(RouteServiceProvider::HOME);
+    }
 
+    public function stores(Request $request): RedirectResponse
+    {
+        $request->validate([
+            'adresse' => ['required', 'string', 'max:255'],
+            'nom_entreprise' => ['required', 'string', 'max:255'],
+            'numero_de_telephone' => ['required', 'string', 'max:255'],
+            'nom' => ['required', 'string', 'max:255'],
+            'prenom' => ['required', 'string', 'max:255'],
+            'profil' => ['required', 'integer', 'max:255'],
+            'etat_compte' => ['required', 'integer', 'max:255'],
+            'email' => ['required', 'string', 'email', 'max:255', 'unique:'.User::class],
+            'password' => ['required', 'confirmed', Rules\Password::defaults()],
+        ]);
+
+        $user = User::create([
+            'adresse' => $request->adresse,
+            'nom_entreprise' => $request->nom_entreprise,
+            'numero_de_telephone' => $request->numero_de_telephone,
+            'nom' => $request->nom,
+            'prenom' => $request->prenom,
+            'etat_compte' => $request->etat_compte,
+            'profil' => $request->profil,
+            'email' => $request->email,
+            'password' => Hash::make($request->password),
+        ]);
+
+        event(new Registered($user));
+        Auth::login($user);
         return redirect(RouteServiceProvider::HOME);
     }
 }

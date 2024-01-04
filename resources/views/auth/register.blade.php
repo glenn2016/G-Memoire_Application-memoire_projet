@@ -47,9 +47,8 @@
             align-items: center;
             justify-content: center;
         }
-
-        input[type="email"],
-        input[type="password"] {
+        
+        input {
             width: 100%;
             padding: 10px;
             margin-bottom: 10px;
@@ -152,12 +151,30 @@
     <div class="container">
         <div class="image"></div>
         <div class="form">
-            <form method="POST" action="{{ route('login') }}" id="step-form">
+            <form method="POST" action="{{ route('register') }}" id="step-form">
                 @csrf
                 <img src="{{asset('welcome/img/Capture-removebg-preview.png')}}" width="50%">
                 <!--Etape-->
                 <div class="form-step form-step-active">
                 <div><h2>Étape 1</h2></div>
+
+                    <label for="prenom" style="text-align:rigth;">Prenom</label>
+                    <input type="text" id="prenom" name="prenom" :value="old('prenom')" required autofocus autocomplete="prenom">
+                    <x-input-error :messages="$errors->get('prenom')" class="mt-2" />
+
+                    <label for="nom" style="text-align:rigth;">Nom</label>
+                    <input type="text" id="nom" name="nom" :value="old('nom')" required autofocus autocomplete="nom">
+                    <x-input-error :messages="$errors->get('nom')" class="mt-2" />
+
+                    <button class="next-step" data-step="2">Suivant</button>
+                </div>
+                 <!--Etape-->
+
+                <!--Etape2-->
+                <div class="form-step">
+                <h2>Étape 2</h2><br>
+
+                
                     <label for="email" style="text-align:rigth;">Adresse e-mail</label>
                     <input type="email" name="email" :value="old('email')" required autofocus autocomplete="username">
                     <x-input-error :messages="$errors->get('email')" class="mt-2" />
@@ -168,24 +185,14 @@
                         name="password"
                         required autocomplete="current-password">
                     <x-input-error :messages="$errors->get('password')" class="mt-2" />
-                    <br><br>         
-                    <button class="next-step" data-step="2">Suivant</button>
-                </div>
-                 <!--Etape-->
+                    <br><br>
 
-                <!--Etape2-->
-                <div class="form-step">
-                <h2>Étape 2</h2><br>
-                    <label for="email" style="text-align:rigth;">Nom</label>
-                    <input type="email" name="email" :value="old('email')" required autofocus autocomplete="username">
-                    <x-input-error :messages="$errors->get('email')" class="mt-2" />
+                    <x-input-label for="password_confirmation" :value="__('Confirmer le mot de passe')" />
+                    <x-text-input id="password_confirmation" class="block mt-1 w-full" type="password"
+                        name="password_confirmation" required autocomplete="new-password" />
+                    <x-input-error :messages="$errors->get('password_confirmation')" class="mt-2" />
 
-                    <label for="password">Prenom</label>
-                    <input id="password" class="block mt-1 w-full"
-                        type="password"
-                        name="password"
-                        required autocomplete="current-password">
-                    <x-input-error :messages="$errors->get('password')" class="mt-2" />
+
                     <br><br>
                     <button class="next-step" data-step="2">Suivant</button>         
                     <button class="next-prev" data-step="2">Précédent</button>
@@ -195,18 +202,19 @@
                 <!--Etape3-->
                 <div class="form-step">
                 <h2>Étape 3</h2><br>
-                    <label for="email" style="text-align:rigth;">Age</label>
-                    <input type="email" name="email" :value="old('email')" required autofocus autocomplete="username">
-                    <x-input-error :messages="$errors->get('email')" class="mt-2" />
+                    <label for="adresse" style="text-align:rigth;">Adresse</label>
+                    <input type="text" name="adresse" :value="old('adresse')" required autofocus autocomplete="adresse">
+                    <x-input-error :messages="$errors->get('adresse')" class="mt-2" />
 
-                    <label for="password">Sexe</label>
-                    <input id="password" class="block mt-1 w-full"
-                        type="password"
-                        name="password"
-                        required autocomplete="current-password">
-                    <x-input-error :messages="$errors->get('password')" class="mt-2" />
+                    <label for="numero_de_telephone" style="text-align:rigth;">Numéro de téléphone</label>
+                    <input type="text" name="numero_de_telephone" :value="old('numero_de_telephone')" required autofocus autocomplete="numero_de_telephone">
+                    <input name="profil" type="number" value="1"Hidden>
+                    <x-input-error :messages="$errors->get('numero_de_telephone')" class="mt-2" />
+
                     <br><br>
-                    <button class="next-step" data-step="2">Suivant</button>         
+                    <x-primary-button class="ml-3">
+                        {{ __('Terminé ') }}
+                    </x-primary-button>
                     <button class="next-prev" data-step="2">Précédent</button>
                 </div>
                  <!--Etape3-->
